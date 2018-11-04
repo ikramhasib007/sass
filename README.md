@@ -33,3 +33,4 @@ SASS documentary
 
 }
 ```
+- [x] Then write your scss code and save it. you may impressed!
