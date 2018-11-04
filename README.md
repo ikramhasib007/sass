@@ -1,7 +1,7 @@
 # SASS
 SASS documentary
 # Setup
-> Editor: I use sublime
+> Editor: I use sublime. you can use whatever you want
   - Plugins list:
     - SASS
     - SASS Build
@@ -16,7 +16,8 @@ SASS documentary
     - scss
   - go to on your sublime menu: Tools > Build System > New Build System
   - then setup like this.
-  ```{
+  ```
+ {
 
   "cmd": ["sass", "--update", "$file:${file_path}/../css/${file_base_name}.css", "--stop-on-error", "--no-cache"],
 
@@ -30,4 +31,5 @@ SASS documentary
       "shell": "true"
   }
 
-}```
+}
+```
