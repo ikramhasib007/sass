@@ -211,3 +211,64 @@ SASS Documentation
       ```
       @include google-font("Archivo");
       ```
+
+## Nested media query
+  ```
+  body {
+    font-family: 'Archivo', sans-serif;
+    background-color: #eee;
+    p {
+      color: $text-color;
+    }
+    @meida only screen and (max-width: 960px) {
+      font-size: 125%;
+    }
+  }
+
+  ```
+
+## Working with Pseudo selector in SASS
+  ```
+  a {
+    text-decoration: none;
+    &:hover {
+      color: darken($link-color, 15%);
+    }
+  }
+  ```
+
+## Built-in function
+  - `darken($link-color, 15%);`
+  - `lighten(orange, 15%);`
+  - `opacify(#fefefe, 0.5);`
+  - `transparentize(#fefefe, 1);`
+  ```
+  a {
+    text-decoration: none;
+    padding: 6px 8px;
+    border-bottom: 1px solid transparentize(#fefefe, 1);
+    transition: 0.5s border-bottom ease-in-out;
+    &:hover {
+      border-bottom: 1px solid opacify(#fefefe, .5);
+    }
+  }
+  ```
+
+## Custom function is SASS
+  ```
+  @function sum($left, $right) {
+    @return $left + $right;
+  }
+
+  @function em($pixel, $context: 16px) {
+    @return ($pixels / $context) * 1em;
+  }
+
+  @function col-width($columns: 12, $page-width: 100%, $gap: 1%) {
+    @return ($page-width - $gap*($columns - 1)) / $columns;
+  }
+
+  @function strip-unit($value) {
+    @return $value / ($value*0 + 1);
+  }
+  ```

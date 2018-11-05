@@ -1,3 +1,4 @@
+@import "partials/functions";
 @import "partials/variables";
 @import "partials/mixins";
 
@@ -15,6 +16,11 @@ body {
 	p {
 		color: $text-color;
 	}
+
+	@include large-screens {
+		font-size: 125%;
+		max-width: $content-width;
+	}
 }
 
 h2 {
@@ -31,4 +37,16 @@ h2 {
 	@include box-shadow(2px 0px 4px #999, 1px 1px, 6px $secondary-color);
 	height: $header-height;
 	background-color: #ccc;
+}
+
+#main {
+	#content {
+		float: left;
+		width: 6*$col;
+	}
+
+	#sidebar {
+		float: right;
+		width: 2*$col;
+	}
 }

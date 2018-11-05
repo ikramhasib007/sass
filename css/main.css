@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Archivo);
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(254, 254, 254, 0);
+  transition: 0.5s border-bottom ease-in-out; }
+  a:hover {
+    border-bottom: 1px solid #fefefe; }
 
 * html body {
   font-size: 125%; }
@@ -10,6 +15,10 @@ body {
   background-color: #eee; }
   body p {
     color: #222222; }
+  @media only screen and (max-width: 960px) {
+    body {
+      font-size: 125%;
+      max-width: 960px; } }
 
 h2 {
   font-size: 22px;
@@ -28,5 +37,12 @@ h2 {
   -webkit-box-shadow: 2px 0px 4px #999, 1px 1px, 6px #f27731;
   height: 60px;
   background-color: #ccc; }
+
+#main #content {
+  float: left;
+  width: 69.75%; }
+#main #sidebar {
+  float: right;
+  width: 23.25%; }
 
 /*# sourceMappingURL=main.css.map */
