@@ -172,3 +172,22 @@ SASS Documentation
       background-color: #ccc;
     }
     ```
+
+## Mixin for specific browser.
+  - For IE 6
+    - Syntax:
+      ```
+      @mixin apply-to-ie-6 {
+        * html {
+          @content;
+        }
+      }
+      ```
+    - Use case:
+      ```
+      @include apply-to-ie-6 {
+        body {
+          font-size: 125%;
+        }
+      }
+      ```

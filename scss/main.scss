@@ -3,6 +3,12 @@
 
 @include fancy-links;
 
+@include apply-to-ie-6 {
+	body {
+		font-size: 125%;
+	}
+}
+
 body {
 	background-color: #eee;
 	p {
