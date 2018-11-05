@@ -167,7 +167,7 @@ SASS Documentation
     ```
     #header {
       @include box(4px, 1px solid $ternary-color);
-      @include box-shadow(2px 0px 4px #999, 1px 1px, 6px $secondary-color);
+      @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
       height: $header-height;
       background-color: #ccc;
     }
