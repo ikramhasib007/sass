@@ -35,7 +35,7 @@ SASS documentary
 ```
   > [x] Then write your scss code and save it and enjoy!
 
-> Create partials 
+## Create partials 
   - Partials file name should be start with a underscore and extension scss
   - Underscore define it's a partials file and that file shouldn't compiled
 
@@ -48,6 +48,6 @@ SASS documentary
     "build_on_save": 1
 }
 ```
-> Import the partials
-  - Using `@import` with filename without underscore. like:
-  - `@import "variables";`
+  - Import the partials
+    - Using `@import` with filename without underscore. like:
+    - `@import "variables";`
