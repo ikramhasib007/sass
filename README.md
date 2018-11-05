@@ -145,4 +145,30 @@ SASS Documentation
       height: $header-height;
       background-color: #ccc;
     }
+
+    /* Expicity use with argument name of your mixin */
+    #header {
+      @include box($border: 1px solid #eee, $radius: 4px);
+      height: $header-height;
+      background-color: #ccc;
+    }
+    ```
+
+## Mixin with multiple argument value (bar arc)
+  - Syntax:
+    ```
+    @mixin box-shadow($shadows...) {
+      box-shadow: $shadows;
+      -moz-box-shadow: $shadows;
+      -webkit-box-shadow: $shadows;
+    }
+    ```
+  - Use case:
+    ```
+    #header {
+      @include box(4px, 1px solid $ternary-color);
+      @include box-shadow(2px 0px 4px #999, 1px 1px, 6px $secondary-color);
+      height: $header-height;
+      background-color: #ccc;
+    }
     ```
