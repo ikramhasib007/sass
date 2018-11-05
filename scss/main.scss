@@ -27,6 +27,16 @@ h2 {
 	@include large-text;
 }
 
+.error {
+	color: red;
+}
+
+.critical-error {
+	@extend .error;
+	border: 1px solid red;
+	font-size: 25px;
+}
+
 .btn-warning {
 	@include warning;
 	padding: 8px 12px;

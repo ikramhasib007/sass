@@ -272,3 +272,73 @@ SASS Documentation
     @return $value / ($value*0 + 1);
   }
   ```
+
+## Inheritance with extend
+  > Only use extend in single element selector
+  - Syntax:
+    ```
+    .error {
+      color: red;
+    }
+
+    .critical-error {
+      @extend .error; /* .error.other-class but not .error .other-class */
+      @extend .other; /* you may use multiple */
+      border: 1px solid red;
+      font-size: 25px;
+    }
+    ```
+  - Output:
+    ```
+    .error, .critical-error {
+      color: red;
+    }
+
+    .critical-error {
+      border: 1px solid red;
+      font-size: 25px;
+    }
+    ```
+
+## limitation of extend
+  - you cannot extend class that outside the media queries
+  - you only extend classes in media queries that is inside the media queries
+  - example
+    - You cannot do that
+      ```
+      .cta-btn {
+        color: red;
+      }
+      @media screen {
+        .super-btn {
+          @extend .cta-btn;
+          font-size: 30px;
+        }
+      }
+      ```
+    - You can do this way
+      ```      
+      @media screen {
+        .cta-btn {
+          color: red;
+        }
+        .super-btn {
+          @extend .cta-btn;
+          font-size: 30px;
+        }
+      }
+      ```
+
+## Extend only selector
+  - extend only selector `%selector-name`. that does not generate any css but you may extend this.
+  - Syntax:
+    ```
+    %hightlight {
+      font-style: italic;
+    }
+    .subtitle {
+      @extend %hightlight;
+      font-size: 25px;
+    }
+    ```
+  - If does not any selector then sass preproccessor does not compile the code. To overcome this situation use `@extend .foo !optional` syntax.
