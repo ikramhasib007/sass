@@ -342,3 +342,22 @@ SASS Documentation
     }
     ```
   - If does not any selector then sass preproccessor does not compile the code. To overcome this situation use `@extend .foo !optional` syntax.
+
+## Conditional Directives
+  - Syntax:
+    ```
+    // Say, allowed values: Dark, Light, Default
+    $theme: Dark;
+
+    // === COLORS ===
+    $text-color: #222222;
+    $body-background-color: #fff;
+
+    @if $theme == Dark {
+      $text-color: #fff;
+      $body-background-color: #22222a;
+    } @else if $theme == Light {
+      $text-color: #000;
+      $body-background-color: #fff;
+    }
+    ```
