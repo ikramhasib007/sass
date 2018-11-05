@@ -84,7 +84,7 @@ SASS Documentation
     ```
 
 ## Mixin with arguments
-  - syntax:
+  - Syntax:
     ```
     @mixin rounded($radius) {
       border-radius: $radius;
@@ -99,6 +99,49 @@ SASS Documentation
     ```
     #header {
       @include box(4px, 1px solid #eee);
+      height: $header-height;
+      background-color: #ccc;
+    }
+    ```
+
+## Mixin with default arguments
+  - Syntax:
+    ```
+    @mixin rounded($radius: 4px) {
+      border-radius: $radius;
+    }
+
+    @mixin box($radius: 4px, $border: 1px solid #ccc) {
+      @include rounded($radius);
+      border: $border;
+    }
+    ```
+  - Use case:
+    ```
+    /* With two parametter */
+    #header {
+      @include box(4px, 1px solid #eee);
+      height: $header-height;
+      background-color: #ccc;
+    }
+    
+    /* With no parametter */
+    #header {
+      @include box;
+      height: $header-height;
+      background-color: #ccc;
+    }
+
+    /* With first parametter */
+    #header {
+      @include box(4px);
+      height: $header-height;
+      background-color: #ccc;
+    }
+
+    /* With second parametter. when use only second parametter then use exact variable name of your mixin */
+    #header {
+      @include box($border: 1px solid #eee);
       height: $header-height;
       background-color: #ccc;
     }
