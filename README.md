@@ -361,3 +361,49 @@ SASS Documentation
       $body-background-color: #fff;
     }
     ```
+
+## Loops
+  - For loop syntax:
+    ```
+    @for $i from 1 through 6 {
+      .col-#{$i} {
+        width: $i * 2em;
+      }
+    }
+    ```
+    OR
+    ```
+    @for $i from 1 to 6 {
+      .col-#{$i} {
+        width: $i * 2em;
+      }
+    }
+    ```
+  - Each loop syntax:
+    ```
+    /* A list of person */
+    $persons: bob-banker, patty-plume, sandra-smith;
+    @each $person in $persons {
+      .#{$person}-profile {
+        background-image: url('/img/#{$person}.png');
+      }
+    }
+    
+    /* Mapping key value pair */
+    $font-sizes: (tiny: 8px, small: 11px, medium: 13px, large: 18px);
+    @each $name, $size in $font-sizes {
+      .#{$name} {
+        font-size: $size;
+      }
+    }
+    ```
+  - While loop syntax:
+    ```
+    $j: 2;
+    @while $j <= 8 {
+      .picture-#{$j} {
+        width: $j * 10%;
+      }
+      $j: $j + 2;
+    }
+    ```
