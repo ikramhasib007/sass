@@ -3,4 +3,8 @@ body {
   body p {
     color: #222222; }
 
+#header {
+  height: 60px;
+  background-color: #ccc; }
+
 /*# sourceMappingURL=main.css.map */
