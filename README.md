@@ -173,7 +173,7 @@ SASS Documentation
     }
     ```
 
-## Mixin for specific browser.
+## Mixin content passing for specific browser.
   - For IE 6
     - Syntax:
       ```
@@ -190,4 +190,24 @@ SASS Documentation
           font-size: 125%;
         }
       }
+      ```
+
+## Import
+  - 4 types of import in css
+    - @import url();
+    - @import "http://...."
+    - @import "filename.css"
+    - @import "style-screen" screen; // this stylesheet only apply for screen
+
+  - Import using interpolation `#{variable_name}`
+    - Syntax:
+      ```
+      @mixin google-font($font) {
+        $font: unquote($font);
+        @import url(http://fonts.googleapis.com/css?family=#{$font})
+      }
+      ```
+    - Use case:
+      ```
+      @include google-font("Archivo");
       ```

@@ -1,8 +1,8 @@
-@import "variables";
-@import "mixins";
+@import "partials/variables";
+@import "partials/mixins";
 
+@include google-font("Archivo");
 @include fancy-links;
-
 @include apply-to-ie-6 {
 	body {
 		font-size: 125%;
@@ -10,6 +10,7 @@
 }
 
 body {
+	font-family: 'Archivo', sans-serif;
 	background-color: #eee;
 	p {
 		color: $text-color;
