@@ -1,6 +1,6 @@
 # SASS
-SASS documentary
-# Setup
+SASS Documentation
+## Setup
 > Editor: I use sublime. you can use whatever you want
   - Plugins list:
     - SASS
