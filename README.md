@@ -53,7 +53,7 @@ SASS Documentation
     - `@import "variables";`
 
 ## Create Mixin
-  - Mixin is a reusable code pattern.
+  - Mixin is a reusable style pattern. Reusable pieces of style.
   - create mixin like:
     ```
     @mixin warning {
@@ -81,4 +81,25 @@ SASS Documentation
           size: 22px;
           weight: bold;
         }
+    ```
+
+## Mixin with arguments
+  - syntax:
+    ```
+    @mixin rounded($radius) {
+      border-radius: $radius;
+    }
+
+    @mixin box($radius, $border) {
+      @include rounded($radius);
+      border: $border;
+    }
+    ```
+  - Use case:
+    ```
+    #header {
+      @include box(4px, 1px solid #eee);
+      height: $header-height;
+      background-color: #ccc;
+    }
     ```

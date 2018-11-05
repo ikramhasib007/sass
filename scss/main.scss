@@ -1,9 +1,7 @@
 @import "variables";
+@import "mixins";
 
-@mixin warning {
-	background-color: orange;
-	color: #fff;
-}
+@include fancy-links;
 
 body {
 	background-color: #eee;
@@ -12,12 +10,17 @@ body {
 	}
 }
 
+h2 {
+	@include large-text;
+}
+
 .btn-warning {
 	@include warning;
 	padding: 8px 12px;
 }
 
 #header {
+	@include box(4px, 1px solid $ternary-color);
 	height: $header-height;
 	background-color: #ccc;
 }

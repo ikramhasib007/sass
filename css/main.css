@@ -1,7 +1,14 @@
+a {
+  text-decoration: none; }
+
 body {
   background-color: #eee; }
   body p {
     color: #222222; }
+
+h2 {
+  font-size: 22px;
+  font-weight: bold; }
 
 .btn-warning {
   background-color: orange;
@@ -9,6 +16,8 @@ body {
   padding: 8px 12px; }
 
 #header {
+  border-radius: 4px;
+  border: 1px solid #ccf962;
   height: 60px;
   background-color: #ccc; }
 
