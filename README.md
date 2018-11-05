@@ -51,3 +51,34 @@ SASS Documentation
   - Import the partials
     - Using `@import` with filename without underscore. like:
     - `@import "variables";`
+
+## Create Mixin
+  - Mixin is a reusable code pattern.
+  - create mixin like:
+    ```
+    @mixin warning {
+      background-color: orange;
+      color: #fff;
+    }
+    ```
+  - Use mixin like:
+    ```
+    .btn-warning {
+      @include warning;
+      padding: 8px 12px;
+    }
+    ```
+
+## Short syntax for styles
+  - Normal syntax:
+    ```
+      font-size: 22px;
+      font-weight: bold;
+    ```
+  - SASS or SCSS syntax:
+    ```
+      font: {
+          size: 22px;
+          weight: bold;
+        }
+    ```

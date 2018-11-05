@@ -3,6 +3,11 @@ body {
   body p {
     color: #222222; }
 
+.btn-warning {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px; }
+
 #header {
   height: 60px;
   background-color: #ccc; }
