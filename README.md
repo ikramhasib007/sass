@@ -419,3 +419,19 @@ SASS Documentation
     gem install compass
     ```
   - Install `Compass` plugins on your Sublime and Select build system to Compass
+  - Add a `config.rb` file on your project root and add those code and save.
+    ```
+    require 'susy'
+    #require 'breakpoint' // # uses for commenting or disable the line
+    #require 'compass'
+
+    preferred_syntax = :scss
+    http_path = '/'
+    css_dir = 'css'
+    sass_dir = 'scss'
+    images_dir = 'images'
+    javascripts_dir = 'js'
+    relative_assets = true
+    line_comments = true
+    #output_style = :compressed
+    ```
