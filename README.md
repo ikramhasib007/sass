@@ -418,3 +418,4 @@ SASS Documentation
     gem install breakpoint
     gem install compass
     ```
+  - Install `Compass` plugins on your Sublime and Select build system to Compass
